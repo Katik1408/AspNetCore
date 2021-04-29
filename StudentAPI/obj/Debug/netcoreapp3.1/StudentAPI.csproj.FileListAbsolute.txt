@@ -72,3 +72,5 @@ C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\Studen
 C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\StudentAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\StudentAPI.csprojAssemblyReference.cache
 C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\StudentAPI.styles.css
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

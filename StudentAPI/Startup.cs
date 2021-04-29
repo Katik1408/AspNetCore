@@ -15,6 +15,8 @@ using Microsoft.Extensions.Logging;
 using StudentAPI.Extentions;
 using StudentAPI.Models;
 using Swashbuckle.SwaggerUi;
+using AutoMapper;
+using StudentAPI.Mapper;
 
 namespace StudentAPI
 {
@@ -36,6 +38,8 @@ namespace StudentAPI
             {
                 options.UseSqlServer(Configuration.GetConnectionString("StudentConnectionString"));
             });
+
+            services.AddAutoMapper(x => x.AddProfile(new AutoMapping()));
             services.AddSwaggerGen();
 
         }

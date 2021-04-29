@@ -1,21 +1,25 @@
-﻿    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.EntityFrameworkCore;
-    using StudentAPI.Models;
-    using System;
-    using System.Linq;
-    using System.Threading.Tasks;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using StudentAPI.DataTransferObjects;
+using StudentAPI.Models;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
-    namespace StudentAPI.Controllers
-    {
+namespace StudentAPI.Controllers
+{
     [Route("api/student")]
     [ApiController]
     public class StudentController : ControllerBase
     {
         public const int x = 7;
         public readonly studentsContext _context;
-        public StudentController(studentsContext context)
+        private readonly IMapper _mapper;
+        public StudentController(studentsContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
         //Action
         [Route("GetStudents")]
@@ -72,11 +76,13 @@
 
         [HttpPost]
         [Route("CreateNewStudent")]
-        public async Task<IActionResult> CreateNewStudent([FromBody] Student student)
+        public async Task<IActionResult> CreateNewStudent([FromBody] StudentDto student)
         {
             try
             {
-                await _context.StudentsModel.AddAsync(student);
+
+                //var r = student.SocialMediaAccount;
+                await _context.StudentsModel.AddAsync(_mapper.Map<Student>(student));
                 await _context.SaveChangesAsync();
                 return Ok(student);
             }
