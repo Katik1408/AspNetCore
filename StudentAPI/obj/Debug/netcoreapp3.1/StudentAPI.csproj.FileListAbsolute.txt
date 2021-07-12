@@ -74,3 +74,13 @@ C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\Studen
 C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\scopedcss\bundle\StudentAPI.styles.css
 C:\Users\saxen\source\repos\StudentAPI\StudentAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\saxen\source\repos\StudentAPI\StudentAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\bin\Debug\netcoreapp3.1\StudentAPI.Views.dll
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\bin\Debug\netcoreapp3.1\StudentAPI.Views.pdb
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\StudentAPI.RazorAssemblyInfo.cache
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\StudentAPI.RazorAssemblyInfo.cs
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\StudentAPI.TagHelpers.input.cache
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\StudentAPI.TagHelpers.output.cache
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\StudentAPI.RazorCoreGenerate.cache
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\StudentAPI.RazorTargetAssemblyInfo.cs
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\StudentAPI.Views.pdb
+C:\Users\saxen\source\repos\StudentAPI\StudentAPI\obj\Debug\netcoreapp3.1\Razor\Views\Error\Index.cshtml.g.cs

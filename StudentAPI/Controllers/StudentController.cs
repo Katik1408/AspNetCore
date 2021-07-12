@@ -81,7 +81,6 @@ namespace StudentAPI.Controllers
             try
             {
 
-                //var r = student.SocialMediaAccount;
                 await _context.StudentsModel.AddAsync(_mapper.Map<Student>(student));
                 await _context.SaveChangesAsync();
                 return Ok(student);
@@ -105,7 +104,7 @@ namespace StudentAPI.Controllers
             {
                 _context.StudentsModel.Remove(student);
                 await _context.SaveChangesAsync();
-                return Ok("Delete Success");
+                return Ok();
 
             }
         }

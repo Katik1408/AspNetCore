@@ -1,22 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using StudentAPI.Extentions;
-using StudentAPI.Models;
-using Swashbuckle.SwaggerUi;
-using AutoMapper;
 using StudentAPI.Mapper;
+using StudentAPI.Models;
 
 namespace StudentAPI
 {
@@ -33,7 +23,8 @@ namespace StudentAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddMvc();
+            services.AddCors();
+            //services.AddMvc().AddControllersAsServices();
             services.AddDbContext<studentsContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("StudentConnectionString"));
@@ -88,7 +79,14 @@ namespace StudentAPI
 
             app.UseAuthorization();
             //CORS Policy
-
+            app.UseCors(o => { o.AllowAnyMethod(); o.AllowAnyHeader(); o.AllowAnyOrigin(); });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //       name: "error",
+            //       template: "one",
+            //       defaults: new { controller = "Error", action = "Index" });
+            //});
 
             app.UseEndpoints(endpoints =>
             {

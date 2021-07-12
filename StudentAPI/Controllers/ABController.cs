@@ -8,7 +8,7 @@ using StudentAPI.Models;
 
 namespace StudentAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("error")]
     [ApiController]
     public class ABController : ControllerBase
     {
@@ -18,11 +18,12 @@ namespace StudentAPI.Controllers
             this.ctx = ctx;
         }
 
-        [Route("getstudents")]
+        [Route("index")]
         [HttpGet]
-        public IActionResult Get()
+        public void Get()
         {
-            return Ok(ctx.StudentsModel.ToList());
+            new RedirectToActionResult("Index", "Error", null);
+
         }
     }
 }
